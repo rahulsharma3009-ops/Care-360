@@ -1,0 +1,769 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f4f9ff;
+}
+
+.navbar {
+  background: #0a66c2;
+  color: white;
+  padding: 15px;
+}
+
+.logo span {
+  color: #b3e5ff;
+}
+
+.hero {
+  display: flex;
+  padding: 60px;
+  background: linear-gradient(to right, #0a66c2, #4da6ff);
+  color: white;
+}
+
+.hero-image img {
+  width: 400px;
+  border-radius: 20px;
+}
+
+.btn {
+  background: white;
+  color: #0a66c2;
+  padding: 12px 25px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.features {
+  padding: 40px;
+}
+
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+}
+
+footer {
+  background: #0a66c2;
+  color: white;
+  text-align: center;
+  padding: 15px;
+}
+/* ===== HOVER INTERACTIONS ===== */
+
+nav a,
+.btn,
+button,
+.card {
+  transition: all 0.3s ease;
+}
+
+/* Navbar links */
+nav a:hover {
+  transform: translateY(-3px) scale(1.05);
+  background: rgba(255,255,255,0.15);
+  padding: 6px 10px;
+  border-radius: 6px;
+}
+
+/* Buttons */
+button:hover,
+.btn:hover {
+  transform: scale(1.08);
+  box-shadow: 0 10px 20px rgba(10,102,194,0.3);
+}
+
+/* Cards pop */
+.card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+}
+/* ===== SCROLL ANIMATIONS ===== */
+
+.slide-in {
+  opacity: 0;
+  transform: translateY(60px);
+  transition: all 0.8s ease-out;
+}
+
+.slide-in.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+/* ===== IMAGE SIZE FIXES ===== */
+
+/* Hero section image */
+.hero-image img {
+  max-width: 380px;     /* controls size */
+  width: 100%;
+  height: auto;
+  border-radius: 20px;
+}
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-image img {
+    max-width: 280px;
+    margin-top: 20px;
+  }
+}
+/* Feature card images */
+.card img {
+  width: 100%;
+  height: 160px;        /* FIXED HEIGHT */
+  object-fit: cover;   /* crop nicely, no stretch */
+  border-radius: 12px;
+  margin-bottom: 12px;
+}
+/* Prevent image overflow on hover */
+.card {
+  overflow: hidden;
+}
+/* ===== NAVIGATION LINK FIX ===== */
+
+nav a {
+  color: white;              /* remove blue */
+  text-decoration: none;     /* remove underline */
+  font-weight: 500;
+  margin: 0 10px;
+  padding: 6px 10px;
+  border-radius: 6px;
+  display: inline-block;
+}
+
+/* Hover effect (already interactive) */
+nav a:hover {
+  background: rgba(255, 255, 255, 0.15);
+  transform: translateY(-3px) scale(1.05);
+}
+a {
+  text-decoration: none;
+  color: #0a66c2;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+/* ===== BREATHING EXERCISE ===== */
+
+.breath-circle {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  border: 6px solid #0a66c2;
+  margin: 20px auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  color: #0a66c2;
+  transition: transform 4s linear;
+}
+
+/* Grow = inhale */
+.breath-circle.inhale {
+  transform: scale(1.2);
+}
+
+/* Stay = hold */
+.breath-circle.hold {
+  transform: scale(1.2);
+}
+
+/* Shrink = exhale */
+.breath-circle.exhale {
+  transform: scale(0.8);
+}
+/* ===== ADVANCED BREATHING MODULE ===== */
+
+.breath-circle {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  border: 6px solid #0a66c2;
+  margin: 20px auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  color: #0a66c2;
+  transition: transform 1s linear;
+}
+
+.breath-circle.inhale { transform: scale(1.2); }
+.breath-circle.hold   { transform: scale(1.2); }
+.breath-circle.exhale { transform: scale(0.8); }
+
+select {
+  padding: 8px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  margin-bottom: 10px;
+}
+/* ===== MOOD MONITORING ===== */
+
+.mood-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin: 15px 0;
+}
+
+.mood-buttons button {
+  font-size: 26px;
+  padding: 10px;
+  border-radius: 50%;
+}
+
+#moodTips {
+  text-align: left;
+  margin-top: 15px;
+  padding-left: 20px;
+}
+
+#moodTips li {
+  margin-bottom: 8px;
+}
+/* ===== HEALTH SCORE VISUAL ===== */
+
+.health-score-container {
+  margin-top: 15px;
+}
+
+.health-score-bar {
+  width: 100%;
+  height: 18px;
+  background: #e0ecff;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.health-score-fill {
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(
+    to right,
+    #ff4d4d,
+    #ffa64d,
+    #4da6ff,
+    #2ecc71
+  );
+  border-radius: 20px;
+  transition: width 1.5s ease-in-out;
+}
+
+.health-score-text {
+  margin-top: 10px;
+  font-size: 22px;
+  font-weight: bold;
+  color: #0a66c2;
+  text-align: center;
+}
+/* ===== HEALTH SCORE ADVANCED ===== */
+
+.score-ring {
+  position: relative;
+  width: 120px;
+  margin: auto;
+}
+
+.score-ring svg {
+  transform: rotate(-90deg);
+}
+
+.ring-bg {
+  fill: none;
+  stroke: #e0ecff;
+  stroke-width: 10;
+}
+
+.ring-fill {
+  fill: none;
+  stroke-width: 10;
+  stroke-linecap: round;
+  stroke: #2ecc71;
+  transition: stroke-dashoffset 1.5s ease, stroke 1s ease;
+}
+
+.score-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 22px;
+  font-weight: bold;
+  color: #0a66c2;
+}
+
+/* Bar */
+.health-score-bar {
+  height: 16px;
+  background: #e0ecff;
+  border-radius: 20px;
+  margin-top: 15px;
+  overflow: hidden;
+}
+
+.health-score-fill {
+  height: 100%;
+  width: 0;
+  background: linear-gradient(to right, #ff4d4d, #f1c40f, #2ecc71);
+  transition: width 1.5s ease;
+}
+
+.score-change {
+  color: #2ecc71;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* Weekly chart */
+.weekly-chart {
+  display: flex;
+  gap: 6px;
+  height: 80px;
+  align-items: flex-end;
+  margin-top: 15px;
+}
+
+.weekly-chart .day {
+  width: 12px;
+  background: #b3d9ff;
+  border-radius: 6px;
+  transition: transform 0.3s;
+}
+
+.weekly-chart .day.active {
+  background: #0a66c2;
+}
+
+.weekly-chart .day:hover {
+  transform: scaleY(1.1);
+}
+.water-bar {
+  height: 14px;
+  background: #e0ecff;
+  border-radius: 20px;
+  margin: 10px 0;
+}
+
+.water-fill {
+  height: 100%;
+  width: 0;
+  background: #4da6ff;
+  border-radius: 20px;
+  transition: width 0.5s ease;
+}
+/* =================================
+   FEMALE CORNER – PINK & WHITE THEME
+================================= */
+
+.female-corner {
+  background: #fff5f8;
+  color: #5a2a3a;
+}
+
+/* Header */
+.fc-header {
+  text-align: center;
+  padding: 50px 20px;
+  background: linear-gradient(to right, #ffb6c1, #ffd6e0);
+  color: #5a2a3a;
+}
+
+.fc-header h1 {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+.fc-header p {
+  font-size: 18px;
+  opacity: 0.9;
+}
+
+/* Cards */
+.female-corner .card {
+  background: #ffffff;
+  border-left: 6px solid #ff8fab;
+  box-shadow: 0 8px 20px rgba(255, 143, 171, 0.2);
+}
+
+.female-corner .card h3 {
+  color: #c2185b;
+}
+
+/* Buttons */
+.female-corner button,
+.female-corner .btn {
+  background: #ff8fab;
+  color: white;
+}
+
+.female-corner button:hover,
+.female-corner .btn:hover {
+  background: #f06292;
+}
+
+/* Links */
+.female-corner a {
+  color: #c2185b;
+}
+
+/* Mood buttons */
+.female-corner .mood-buttons button {
+  background: #ffe4ec;
+  border: 1px solid #ffb6c1;
+}
+
+.female-corner .mood-buttons button:hover {
+  background: #ffb6c1;
+}
+
+/* Breathing circle override */
+.female-corner .breath-circle {
+  border-color: #ff8fab;
+  color: #c2185b;
+}
+
+/* Scroll animation color harmony */
+.female-corner .slide-in.active {
+  box-shadow: 0 12px 25px rgba(255, 143, 171, 0.25);
+}
+/* ===== FEMALE CORNER ADD-ONS ===== */
+
+.fc-reassurance {
+  text-align: center;
+  padding: 30px;
+  background: #ffe6ee;
+  border-radius: 16px;
+  margin: 30px;
+}
+
+.fc-reassurance h2 {
+  color: #c2185b;
+}
+
+.fc-note {
+  font-size: 14px;
+  opacity: 0.8;
+  margin-top: 10px;
+}
+
+/* Cycle Wheel */
+.cycle-wheel {
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  margin: 20px auto;
+  position: relative;
+  background: conic-gradient(
+    #ffccd5 0deg 90deg,
+    #ffd6e0 90deg 180deg,
+    #ffb6c1 180deg 270deg,
+    #ff9eb5 270deg 360deg
+  );
+}
+
+.phase {
+  position: absolute;
+  font-size: 13px;
+  font-weight: bold;
+  color: #5a2a3a;
+}
+
+.menstrual { top: 10px; left: 70px; }
+.follicular { top: 80px; right: -10px; }
+.ovulation { bottom: 10px; left: 70px; }
+.luteal { top: 80px; left: -10px; }
+
+/* Hormone Timeline */
+.hormone-timeline {
+  display: flex;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.hormone {
+  flex: 1;
+  padding: 15px;
+  border-radius: 12px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.estrogen { background: #ffd6e0; }
+.progesterone { background: #ffb6c1; }
+.low { background: #ffeef3; }
+
+/* Anonymous box */
+textarea {
+  width: 100%;
+  min-height: 80px;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid #ffb6c1;
+}
+/* ===== MEDICINE DRAWER UPGRADE ===== */
+
+.medicine-list {
+  list-style: none;
+  padding: 0;
+}
+
+.medicine-list li {
+  background: #f9fcff;
+  padding: 12px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+
+.medicine-list li:hover {
+  transform: translateX(5px);
+  box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+}
+
+.medicine-info {
+  text-align: left;
+}
+
+.medicine-actions button {
+  margin-left: 5px;
+  padding: 6px 10px;
+  font-size: 12px;
+}
+
+.taken {
+  background: #e6f9f0;
+  border-left: 5px solid #2ecc71;
+}
+
+.missed {
+  background: #fff0f0;
+  border-left: 5px solid #ff4d4d;
+}
+
+/* Progress bar */
+.med-progress-bar {
+  width: 100%;
+  height: 14px;
+  background: #e0ecff;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.med-progress-fill {
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(to right, #4da6ff, #2ecc71);
+  transition: width 0.5s ease;
+}
+
+/* Empty state */
+.medicine-list .empty {
+  text-align: center;
+  opacity: 0.7;
+}
+/* ===== APPOINTMENTS SECTION ===== */
+
+.appointment-list {
+  list-style: none;
+  padding: 0;
+  margin-top: 10px;
+}
+
+.appointment-list li {
+  background: #f9fcff;
+  padding: 14px;
+  margin-bottom: 12px;
+  border-radius: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: 0.3s;
+}
+
+.appointment-list li:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.12);
+}
+
+.appointment-info {
+  text-align: left;
+}
+
+.appointment-actions button {
+  margin-left: 6px;
+  padding: 6px 10px;
+  font-size: 12px;
+}
+
+/* STATUS COLORS */
+.upcoming {
+  border-left: 6px solid #4da6ff;
+}
+
+.completed {
+  border-left: 6px solid #2ecc71;
+  background: #e9fbf2;
+}
+
+.cancelled {
+  border-left: 6px solid #ff4d4d;
+  background: #fff0f0;
+}
+
+.empty {
+  text-align: center;
+  opacity: 0.6;
+}
+/* ===== EMERGENCY SOS ===== */
+
+.sos-btn {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  background: #ff1e1e;
+  color: white;
+  font-weight: bold;
+  padding: 16px 20px;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 0 0 rgba(255,30,30,0.7);
+  animation: pulse 1.5s infinite;
+  z-index: 1000;
+}
+
+/* Pulse animation */
+@keyframes pulse {
+  0% { box-shadow: 0 0 0 0 rgba(255,30,30,0.6); }
+  70% { box-shadow: 0 0 0 20px rgba(255,30,30,0); }
+  100% { box-shadow: 0 0 0 0 rgba(255,30,30,0); }
+}
+
+/* Modal */
+.sos-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+}
+
+.sos-content {
+  background: white;
+  padding: 25px;
+  border-radius: 16px;
+  text-align: center;
+  width: 300px;
+  animation: scaleIn 0.3s ease;
+}
+
+@keyframes scaleIn {
+  from { transform: scale(0.7); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+.sos-action {
+  display: block;
+  margin: 12px 0;
+  padding: 12px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+}
+
+.sos-action.call {
+  background: #ff4d4d;
+  color: white;
+}
+
+.sos-action.location {
+  background: #4da6ff;
+  color: white;
+}
+
+.sos-action.guide {
+  background: #2ecc71;
+  color: white;
+}
+
+.sos-cancel {
+  margin-top: 10px;
+  background: #ddd;
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+}
+/* ===== REPORTS SECTION ===== */
+
+.report-list {
+  list-style: none;
+  padding: 0;
+  margin-top: 10px;
+}
+
+.report-list li {
+  background: #f9fcff;
+  padding: 14px;
+  margin-bottom: 12px;
+  border-radius: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: 0.3s;
+}
+
+.report-list li:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 18px rgba(0,0,0,0.12);
+}
+
+.report-info {
+  text-align: left;
+}
+
+.report-info small {
+  opacity: 0.8;
+}
+
+.report-actions button {
+  margin-left: 6px;
+  padding: 6px 10px;
+  font-size: 12px;
+}
+
+.report-type {
+  font-size: 12px;
+  padding: 4px 8px;
+  border-radius: 6px;
+  background: #e0ecff;
+  color: #0a66c2;
+}
+
+.report-list .empty {
+  text-align: center;
+  opacity: 0.6;
+}
