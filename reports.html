@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Reports | Care360</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="navbar">
+  <h1 class="logo">Care<span>360</span></h1>
+</header>
+
+<section class="features">
+
+  <h2>Medical Reports 📄</h2>
+  <p>Store and manage your medical reports securely.</p>
+
+  <!-- ADD REPORT -->
+  <div class="card slide-in">
+    <h3>Add New Report</h3>
+
+    <input id="reportName" type="text" placeholder="Report name (e.g. Blood Test)">
+    
+    <select id="reportType">
+      <option value="Blood Test">Blood Test</option>
+      <option value="Prescription">Prescription</option>
+      <option value="Scan">Scan / X-Ray</option>
+      <option value="Other">Other</option>
+    </select>
+
+    <input id="reportFile" type="file">
+
+    <button onclick="addReport()">Upload Report</button>
+  </div>
+
+  <!-- FILTER -->
+  <div class="card slide-in">
+    <h3>Filter Reports</h3>
+    <select id="filterType" onchange="filterReports()">
+      <option value="All">All</option>
+      <option value="Blood Test">Blood Test</option>
+      <option value="Prescription">Prescription</option>
+      <option value="Scan">Scan / X-Ray</option>
+      <option value="Other">Other</option>
+    </select>
+  </div>
+
+  <!-- REPORT LIST -->
+  <div class="card slide-in">
+    <h3>Your Reports</h3>
+
+    <ul id="reportList" class="report-list">
+      <li class="empty">No reports uploaded yet 📂</li>
+    </ul>
+  </div>
+
+</section>
+
+<script src="js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Medicines | Care360</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="navbar">
+  <h1 class="logo">Care<span>360</span></h1>
+</header>
+
+<section class="features">
+  <h2>Virtual Medicine Drawer 💊</h2>
+  <p>Manage your daily medicines easily and never miss a dose.</p>
+
+  <!-- Add Medicine -->
+  <div class="card slide-in">
+    <h3>Add Medicine</h3>
+
+    <input id="medName" placeholder="Medicine name">
+    <input id="medDose" placeholder="Dosage (e.g. 1 tablet)">
+    <select id="medTime">
+      <option>Morning</option>
+      <option>Afternoon</option>
+      <option>Night</option>
+    </select>
+
+    <button onclick="addMedicine()">Add to Drawer</button>
+  </div>
+
+  <!-- Progress -->
+  <div class="card slide-in">
+    <h3>Today’s Progress</h3>
+    <div class="med-progress-bar">
+      <div class="med-progress-fill" id="medProgressFill"></div>
+    </div>
+    <p id="medProgressText">0% completed</p>
+  </div>
+
+  <!-- Medicine List -->
+  <div class="card slide-in">
+    <h3>Today’s Medicines</h3>
+    <ul id="medicineList" class="medicine-list">
+      <li class="empty">No medicines added yet 🌱</li>
+    </ul>
+  </div>
+</section>
+
+<script src="js/app.js"></script>
+</body>
+</html>

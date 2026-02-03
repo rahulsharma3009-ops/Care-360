@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dashboard | Care360</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="navbar">
+  <h1 class="logo">Care<span>360</span></h1>
+</header>
+
+<section class="features">
+  <h2>Health Dashboard</h2>
+
+  <div class="feature-grid">
+     <div class="card slide-in">
+  <h3>Health Score</h3>
+
+  <!-- Circular Ring -->
+  <div class="score-ring">
+    <svg width="120" height="120">
+      <circle cx="60" cy="60" r="50" class="ring-bg"/>
+      <circle cx="60" cy="60" r="50" class="ring-fill"
+              stroke-dasharray="314"
+              stroke-dashoffset="314"
+              id="ringFill"/>
+    </svg>
+    <div class="score-center">
+      <span id="scoreValue">0</span>%
+    </div>
+  </div>
+
+  <!-- Bar -->
+  <div class="health-score-bar">
+    <div class="health-score-fill" id="healthScoreFill"></div>
+  </div>
+
+  <p class="score-change">+2 today ▲</p>
+
+  <!-- Weekly Chart -->
+  <div class="weekly-chart">
+    <div class="day" style="height:40%"></div>
+    <div class="day" style="height:55%"></div>
+    <div class="day" style="height:60%"></div>
+    <div class="day" style="height:70%"></div>
+    <div class="day" style="height:76%"></div>
+    <div class="day" style="height:72%"></div>
+    <div class="day active" style="height:76%"></div>
+  </div>
+
+  <small title="Calculated from activity, water, wellness & habits">
+    ℹ Based on daily habits
+  </small>
+    </div>
+
+    <div class="card">
+      <h3>Water Intake</h3>
+      <p id="water">0 / 8 glasses</p>
+      <button onclick="addWater()">Add Glass</button>
+    </div>
+
+    <div class="card">
+      <h3>Daily Steps</h3>
+      <input id="stepsInput" type="number" placeholder="Enter steps">
+      <button onclick="saveSteps()">Update</button>
+      <p id="stepsResult"></p>
+    </div>
+  </div>
+</section>
+
+<script src="js/app.js"></script>
+</body>
+</html>

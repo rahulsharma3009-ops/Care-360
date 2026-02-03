@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Wellness | Care360</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="navbar">
+  <h1 class="logo">Care<span>360</span></h1>
+</header>
+
+<section class="features">
+  <h2>Mental Wellness</h2>
+
+ <!-- Mood Monitoring -->
+<div class="card slide-in">
+  <h3>Mood Check-in</h3>
+  <p>How are you feeling right now?</p>
+
+  <div class="mood-buttons">
+    <button onclick="setMood('happy')">😊</button>
+    <button onclick="setMood('neutral')">😐</button>
+    <button onclick="setMood('low')">😔</button>
+    <button onclick="setMood('stressed')">😡</button>
+    <button onclick="setMood('tired')">😴</button>
+  </div>
+
+  <p id="moodStatus" style="font-weight:bold;margin-top:10px;"></p>
+
+  <ul id="moodTips"></ul>
+</div>
+
+<div class="card slide-in">
+  <h3>Guided Breathing Exercise</h3>
+
+  <select id="breathMode">
+    <option value="calm">Calm</option>
+    <option value="focus">Focus</option>
+    <option value="sleep">Sleep</option>
+  </select>
+
+  <p id="breathText">Select a mode and start</p>
+
+  <div class="breath-circle">
+    <span id="breathTimer">0</span>
+  </div>
+
+  <div style="display:flex;gap:10px;justify-content:center;">
+    <button onclick="startBreathing()">Start</button>
+    <button onclick="pauseBreathing()">Pause</button>
+    <button onclick="resumeBreathing()">Resume</button>
+  </div>
+
+  <p style="margin-top:10px;">
+    ⏱ Minutes today: <b id="breathMinutes">0</b>
+  </p>
+</div>
+
+
+</section>
+
+<script src="js/app.js"></script>
+</body>
+</html>

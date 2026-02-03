@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Care360</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<!-- EMERGENCY SOS BUTTON -->
+<div class="sos-btn" onclick="openSOS()">SOS</div>
+
+<!-- SOS MODAL -->
+<div id="sosModal" class="sos-modal">
+  <div class="sos-content">
+    <h2>🚨 Emergency SOS</h2>
+    <p>Choose an action immediately</p>
+
+    <a href="tel:112" class="sos-action call">📞 Call Emergency (112)</a>
+
+    <button class="sos-action location" onclick="shareLocation()">
+      📍 Share Location
+    </button>
+
+    <button class="sos-action guide" onclick="showGuide()">
+      🩺 Emergency Guide
+    </button>
+
+    <button class="sos-cancel" onclick="closeSOS()">Cancel</button>
+  </div>
+</div>
+
+<body>
+
+<header class="navbar">
+  <h1 class="logo">Care<span>360</span></h1>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="dashboard.html">Dashboard</a>
+    <a href="reports.html">Reports</a> 
+    <a href="medicine.html">Medicines</a>
+    <a href="wellness.html">Wellness</a>
+    <a href="appointments.html">Appointments</a>
+    <a href="female-corner.html">Female Corner</a>
+
+
+  </nav>
+</header>
+
+<section class="hero">
+  <div class="hero-text">
+    <h1>Your Health. Every Angle. One Circle.</h1>
+    <p>
+      <b>Care360</b>  helps you manage medical records, mental wellness,
+      lifestyle habits, and emergency readiness in one place.
+    </p>
+    <a href="dashboard.html" class="btn">Get Started</a>
+  </div>
+
+  <div class="hero-image">
+    <img src="images/hero-doctor.jpg" alt="Healthcare">
+  </div>
+</section>
+
+<section class="features">
+  <h2>What Care360 Offers?</h2>
+
+  <div class="feature-grid">
+    <div class="card">
+      <img src="images/records.jpg">
+      <h3>Secure Health Records</h3>
+      <p>Store prescriptions, reports, and history safely.</p>
+    </div>
+
+    <div class="card">
+      <img src="images/mental-health.jpg">
+      <h3>Mental Wellness</h3>
+      <p>Mood tracking, breathing exercises, stress support.</p>
+    </div>
+
+    <div class="card">
+      <img src="images/fitness.jpg">
+      <h3>Lifestyle & Fitness</h3>
+      <p>Track water, walking, and daily healthy habits.</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>© 2026 Care360. All rights reserved.</p>
+</footer>
+
+</body>
+</html>

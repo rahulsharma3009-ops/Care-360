@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Appointments | Care360</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="navbar">
+  <h1 class="logo">Care<span>360</span></h1>
+</header>
+
+<section class="features">
+
+  <h2>Appointments 📅</h2>
+  <p>Book, view, and manage your doctor appointments easily.</p>
+
+  <!-- BOOK APPOINTMENT -->
+  <div class="card">
+    <h3>Book Appointment</h3>
+
+    <input id="doctorName" type="text" placeholder="Doctor name">
+    <input id="doctorType" type="text" placeholder="Specialization">
+    <input id="appointmentDate" type="date">
+    <input id="appointmentTime" type="time">
+
+    <button onclick="addAppointment()">Book Appointment</button>
+  </div>
+
+  <!-- SUMMARY -->
+  <div class="card">
+    <h3>Summary</h3>
+    <p>Upcoming: <b id="upcomingCount">0</b></p>
+    <p>Completed: <b id="completedCount">0</b></p>
+  </div>
+
+  <!-- APPOINTMENT LIST -->
+  <div class="card">
+    <h3>Your Appointments</h3>
+
+    <ul id="appointmentList" class="appointment-list">
+      <li class="empty">No appointments booked yet 📭</li>
+    </ul>
+  </div>
+
+</section>
+
+<script src="js/app.js"></script>
+</body>
+</html>
